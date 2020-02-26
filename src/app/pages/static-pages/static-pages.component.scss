@@ -1,0 +1,33 @@
+.style-label{
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(19, 17, 17);
+}
+.style-label-ar{
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(19, 17, 17);
+  float: right !important;
+  // direction: rtl !important;
+}
+a.close-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 2em;
+}
+input {
+  border: 1px solid #252422;
+}
+textarea {
+  border: 1px solid #252422;
+}
+.btn-outline-warning {
+  border: 2px dashed rgb(36, 33, 33) !important;
+  padding: 10px 25px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.dir-ltr {
+  direction: ltr !important;
+}

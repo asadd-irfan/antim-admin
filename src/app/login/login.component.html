@@ -1,0 +1,52 @@
+<div class="page">
+<div class="login-wrapper " fxLayout="row" fxLayoutAlign="center center">
+
+  <mat-card class="example-card">
+      <!-- <h3 class="card-title">Log in to Antim Admin </h3> -->
+
+    <mat-card-header >
+      <mat-card-title >
+          <div class="logo" style="margin-bottom: 20px;">
+              <a class="simple-text logo-mini">
+                <div class="logo-image-small">
+          
+                </div>
+              </a>
+              <a class="simple-text logo-normal ">
+                <img src="assets/img/logo.svg" style="width: 150px;">
+              </a>
+            </div> 
+               </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-form" [formGroup]="LoginForm">  
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+              <input formControlName="username" matInput placeholder="Email or Username" [(ngModel)]="username" name="username" required>
+              <div *ngIf="LoginForm.controls['username'].touched && LoginForm.controls['username'].hasError('minlength')" class="error-msg alert alert-danger text-left">Username length must be at least 4 characters long. </div>
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+          <td><mat-form-field class="example-full-width">
+            <input formControlName="password" matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+            <div *ngIf="LoginForm.controls['password'].touched && LoginForm.controls['password'].hasError('minlength')" class="error-msg alert alert-danger ">Password length must be at least 9 characters long.</div>
+          </mat-form-field></td>
+        </tr></table>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="Login()" [disabled]="!LoginForm.valid" class="basic-button mt-2">Login</button>
+    </mat-card-actions>
+    <div style="text-align: center;  margin-top: 15px;" >
+      <a [routerLink]="[ '/forget-password' ]" style="color: rgb(68, 65, 65) !important;">Forgot Password ?</a>
+  </div>
+  </mat-card>
+  <ngx-spinner bdColor="rgba(51,51,51,0.8)"
+  size="medium" color="#fff" type="ball-scale-multiple">
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+</div>
+</div>

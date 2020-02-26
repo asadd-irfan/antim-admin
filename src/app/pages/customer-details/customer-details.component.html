@@ -1,0 +1,201 @@
+<div class="row">
+    <div class="col-md-12  ">
+      <div class="card " >
+        <div class="card-header">
+          <div class="row">
+              <div class="w3-xlarge  col-lg-2 p-0" style="text-align: center;">  <button class="back-btn btn-sm" [routerLink]="['/customers']"><i class="fa fa-chevron-left" ></i> Back</button> </div>
+              
+              <div class="p-0 col-lg-9">
+                <h2 class="m-0"style="margin-left: 10px; "><u>Customer Details</u></h2>
+              </div>  
+            </div>     
+      </div>
+      <div class="card-body my-5 ">
+                
+      <form class="col-lg-10 row antim-form mt-4 mb-5 m-auto" >
+        <div class="col-lg-12" style="text-align: center;"><h3>Change Customer Status</h3>
+          </div>
+            <div class="row" style="width: 100%;" *ngIf="showActivateButton && !showStatus"> 
+            <div class="col-lg-9" ></div>
+            <div class="col-lg-3">
+                <button class="btn btn-round btn-success "  (click)="OpenActivatePopup(content1)">Activate User </button>
+            </div>
+          </div>
+           <div class="row" style="width: 100%;" *ngIf="!showActivateButton && showStatus"> 
+              <div class="col-lg-6">
+                <select class="form-control form-control-lg mb-2 custom-select" (change)="onChange($event.target.value)">
+                  <option value="" selected>Select Customer Status</option>
+                  <option value="deActive">DeActivate Customer</option>
+                  <option value="suspend">Suspend Customer</option>
+              </select>
+              </div>
+              <div class="col-lg-4"></div>
+              <div class="col-lg-2">
+                <button class="btn btn-round btn-primary " [disabled]="!savebutton" (click)="OpenPopup(content)">Save</button>
+              </div>
+            </div>
+        </form>
+                <form class="col-lg-10 row antim-form mt-4 mb-5 m-auto" >
+                        <div class="col-lg-12" style="text-align: center;"><h3>Personal Details</h3>
+                          </div>
+                    <div class="row" style="width: 100%;">
+                      <div class="col-lg-6">
+                          <label class="font-bold mt-2"> Name: </label>
+                          <input  class="form-control  " value="{{customerAllDetails?.firstName}} {{customerAllDetails?.lastName}}"   readonly>
+                      </div>
+                      <div class="col-lg-6">
+                        <label class="font-bold mt-2"> Iqama Number : </label>
+                        <input  class="form-control  " value="{{customerAllDetails?.nationalIdNumber}}"   readonly>
+                    </div>
+                    </div>
+                    <div class="row" style="width: 100%;">
+                      <div class="col-lg-6">
+                        <label class="font-bold mt-2"> UserName: </label>
+                        <input  class="form-control  " value="{{customerAllDetails?.userName}}"   readonly>
+                    </div>
+                        <div class="col-lg-6">
+                            <label class="font-bold mt-2">Email : </label>
+                            <input  class="form-control  " value="{{customerAllDetails?.email}}"   readonly>
+                        </div>
+                      </div>
+                      <div class="row" style="width: 100%;">
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-6">
+                          <label class="font-bold mt-2">Phone Number : </label>
+                          <input  class="form-control  " value="{{customerAllDetails?.phoneNumber}}"  readonly>
+                      </div>
+                         
+                          <!-- <div class="col-lg-6">
+                              <label class="font-bold mt-2"> Status : </label>
+                              <input  class="form-control  " value="{{customerStatus}}"   readonly>
+                          </div> -->
+                        </div>
+                        <div class="col-lg-12" style="text-align: center; margin-top: 30px;"><h3>Address Details</h3>
+                        </div>
+                        <div class="row" style="width: 100%;">
+                            <div class="col-lg-8">
+                                <label class="font-bold mt-2"> Complete Address : </label>
+                                <input  class="form-control  " value="{{customerAddress}}"   readonly>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="font-bold mt-2"> City : </label>
+                                <input  class="form-control  " value="{{customerCity}}"   readonly>
+                            </div>
+                          </div>
+                          <div class="col-lg-12" style="text-align: center; margin-top: 30px;"><h3>Bank Details</h3>
+                          </div>
+                          <div class="row" style="width: 100%;">
+                              <div class="col-lg-6">
+                                  <label class="font-bold mt-2"> Bank Name : </label>
+                                  <input  class="form-control  " value="{{customerBankName}}"   readonly>
+                              </div>
+                              <div class="col-lg-6">
+                                  <label class="font-bold mt-2"> Account Title : </label>
+                                  <input  class="form-control  " value="{{customerBankAccountTitle}}"   readonly>
+                              </div>
+                            </div>
+                            <div class="row" style="width: 100%;">
+                              <div class="col-lg-3"></div>
+                              <div class="col-lg-6">
+                                <label class="font-bold mt-2"> Account Number : </label>
+                                <input  class="form-control  " value="{{customerBankAccountNumber}}"   readonly>
+                             </div>
+                            </div>
+                  
+
+                             
+                          
+             <ngx-spinner bdColor = "rgba(51, 51, 51, 0.8)"size = "medium"
+                color = "white" type = "ball-clip-rotate" [fullScreen] = "true">
+                <p style="color: white; margin-top:50px;font-size: 26px;" > Loading... </p>
+            </ngx-spinner>
+           
+          </form>
+
+          <div class="col-lg-12" style="text-align: center; margin-top: 30px;"><h3>Account Statements</h3>
+          </div>  
+          <div class="col-lg-12" *ngIf="!ShowAccountStatements">
+              <p style="color: red; text-align: center; margin-top: 30px; font-size: 16px;">No Account Statement Uploaded By Customer!</p>
+            </div>
+        <div *ngIf="ShowAccountStatements">
+          <div class="row" style="width: 100%;" *ngFor="let file of accountStatements; let i = index;">
+            <div class="col-lg-2 " >
+            </div><div class="col-lg-6" >
+               <img src="assets/img/doc.png" width="60px" height="60px">
+               <p class="mt-2">{{file.name}}</p>
+            </div>
+              <div class="col-lg-1 " >
+              </div>
+              <div class="form-group mt-4 col-lg-3">
+                <button type="button" class="btn btn-primary "(click)="downloadFile(file.name)" >Download</button>
+              </div>
+           </div>
+          </div>
+
+          <div class="col-lg-12" style="text-align: center; margin-top: 30px;"><h3>Salary Statements</h3>
+          </div>  
+          <div class="col-lg-12" *ngIf="!ShowSalaryStatements">
+              <p style="color: red; text-align: center; margin-top: 30px; font-size: 16px;">No Salary Statement Uploaded By Customer!</p>
+            </div>
+        <div *ngIf="ShowSalaryStatements">
+          <div class="row" style="width: 100%;" *ngFor="let file of salaryStatements; let i = index;">
+            <div class="col-lg-2 " >
+            </div><div class="col-lg-6" >
+               <img src="assets/img/doc.png" width="60px" height="60px">
+               <p class="mt-2">{{file.name}}</p>
+            </div>
+              <div class="col-lg-1 " >
+              </div>
+              <div class="form-group mt-4 col-lg-3">
+                <button type="button" class="btn btn-primary "(click)="downloadFile(file.name)" >Download</button>
+              </div>
+           </div>
+          </div>
+
+          <ng-template #content1 let-modal>
+            <div class="modal-header">
+                <h4 class="modal-title p-1 m-1"> Do you really Want To Activate this User?
+                </h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>             
+              <div class="modal-footer">
+              <div class="col-lg-4"></div>
+              <div class="col-lg-4"><button class="btn btn-success btn-lg" (click)="activateUser()">Yes</button></div>
+              <div class="col-lg-4"><button class="btn btn-danger btn-lg" (click)="modal.close('Close click')">No</button></div>
+              </div>
+          </ng-template>
+
+          <ng-template #content let-modal>
+            <div class="modal-header">
+                <h4 class="modal-title p-1 m-1"> Do you really Want To {{customerStatus}} this Customer?</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <textarea rows="7" cols="100" placeholder="Enter Reason here..." [(ngModel)]="reason"></textarea>
+                         
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <div class="col-lg-4"></div>
+                      <div class="col-lg-4"><button class="btn btn-success btn-lg" (click)="ChangeStatus()">Yes</button></div>
+                      <div class="col-lg-4"><button class="btn btn-danger btn-lg" (click)="modal.close('Close click')">No</button></div>
+              </div>
+          </ng-template>
+          <ngx-spinner bdColor = "rgba(51, 51, 51, 0.8)"size = "medium"
+          color = "white" type = "ball-clip-rotate" [fullScreen] = "true">
+          <p style="color: white; margin-top:50px;font-size: 26px;" > Loading... </p>
+          </ngx-spinner>
+
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  

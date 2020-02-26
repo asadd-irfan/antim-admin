@@ -1,0 +1,91 @@
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <div class="card card-user">
+      <div class="card-header">
+        <h5 class="card-title">Create A New Admin</h5>
+      </div>
+      <div class="card-body">
+        <form  [formGroup]="AdminForm" >
+          <div class="row">
+            <div class="form-group  col-lg-6">
+              <label>First Name<span class="red-color"> *</span></label>
+              <input   formControlName="FirstName" type="text" class="form-control"  [(ngModel)]="firstName" placeholder="Type First name here... " >
+              <div *ngIf="AdminForm.controls['FirstName'].touched && AdminForm.controls['FirstName'].hasError('required')" class="error m-0">First Name is required</div>
+              <div *ngIf="AdminForm.controls['FirstName'].touched && AdminForm.controls['FirstName'].hasError('pattern')" class="error m-0">First Name must contains only characters.</div>
+            </div>
+
+            <div class="form-group  col-lg-6">
+              <label>Last Name<span class="red-color"> *</span></label>
+              <input   formControlName="LastName" type="text" class="form-control" [(ngModel)]="lastName" placeholder="Type Last name here..." >
+              <div *ngIf="AdminForm.controls['LastName'].touched && AdminForm.controls['LastName'].hasError('required')" class="error m-0">Last Name is required</div>
+              <div *ngIf="AdminForm.controls['LastName'].touched && AdminForm.controls['LastName'].hasError('pattern')" class="error m-0">Last Name must contains only characters. </div>
+         </div>
+
+          </div>
+          <div class="row">
+              <div class="form-group  col-lg-6">
+                <label>Username<span class="red-color"> *</span></label>
+                <input   formControlName="Username" type="text" class="form-control" [(ngModel)]="userName" placeholder="Type User name here..." >
+                <div *ngIf="AdminForm.controls['Username'].touched && AdminForm.controls['Username'].hasError('required')" class="error m-0"> UserName is required</div>
+                <div *ngIf="AdminForm.controls['Username'].touched && AdminForm.controls['Username'].hasError('minlength')" class="error m-0">UserName must be at least 5 characters long.</div>
+              </div>
+            <div class="form-group  col-lg-6">
+                    <label>Iqama Number<span class="red-color"> *</span></label>
+                    <input   formControlName="NID" type="text" class="form-control"  [(ngModel)]="NID" placeholder="Type National ID here...">
+                    <div *ngIf="AdminForm.controls['NID'].touched && AdminForm.controls['NID'].hasError('required')" class="error m-0">National ID is required</div>
+                    <div *ngIf="AdminForm.controls['NID'].touched && AdminForm.controls['NID'].hasError('minlength')" class="error m-0">National ID number must be at least 10 characters long.</div>
+                </div>
+           </div>
+
+            <div class="col-lg-11 row form-group">
+                <label >Email Address<span class="red-color"> *</span></label>
+                <input  formControlName="Email" type="email" class="form-control" [(ngModel)]="email" placeholder="Type E-mail here...">
+                <div *ngIf="AdminForm.controls['Email'].touched && AdminForm.controls['Email'].hasError('required')" class="error m-0">Email is required</div>
+                <div *ngIf="AdminForm.controls['Email'].touched && AdminForm.controls['Email'].hasError('pattern')" class="error m-0">Enter proper Email.</div>
+            </div>
+
+          <div class="form-group  row col-lg-11">
+            <label >Password<span class="red-color"> *</span></label>
+            <input formControlName="password" class="form-control" placeholder="************" type="password" [(ngModel)]="password">
+            <div *ngIf="AdminForm.controls['password'].touched && AdminForm.controls['password'].hasError('required')" class="error m-0">Password is required</div>
+            <div *ngIf="AdminForm.controls['password'].touched && AdminForm.controls['password'].hasError('pattern')" class="error m-0">Password must contain Upper Cases Letter, Lower Cases Letter, Numbers, Special Characters (!, @, _, #, $ ..etc.) and at least 9 characters long.</div>
+    
+        </div>
+        <div class="form-group row col-lg-11">
+          <label>Confirm Password<span class="red-color"> *</span></label>
+          <input formControlName="confirmPassword" class="form-control" placeholder="************" type="password"  [(ngModel)]="confirmPassword">
+          <div>
+            <div *ngIf="AdminForm.controls['confirmPassword'].touched && AdminForm.controls['confirmPassword'].hasError('required')" class="error m-0">Confirm Password is required.</div>
+            <div *ngIf="AdminForm.controls['confirmPassword'].touched && AdminForm.value.password != AdminForm.value.confirmPassword" class="error m-0">Passwords must be same.</div>  
+          </div>
+        </div>
+        <div class="row">
+        <div class="form-group  col-lg-3">
+
+                <label >Country Code<span class="red-color"> *</span></label>
+                <input  formControlName="CountryCode" type="text" class="form-control"  [(ngModel)]="countryCode" placeholder="+966" >
+                <div *ngIf="AdminForm.controls['CountryCode'].touched && AdminForm.controls['CountryCode'].hasError('required')" class="error"> Country Code is required</div>
+            </div>
+            <div class="form-group  col-lg-8">
+                  <label >Mobile No.<span class="red-color"> *</span></label>
+                  <input  formControlName="MobileNo" type="text" class="form-control" [(ngModel)]="phone" placeholder="Type Mobile Number here" (keyup)="inputNumber($event)" digitOnly
+                  oninput="javascript: if (this.value.length >= 9) { document.getElementById('phonenumber').style.visibility = 'hidden'; }
+                  else { document.getElementById('phonenumber').style.visibility = 'visible'; }">
+                   <div *ngIf="AdminForm.controls['MobileNo'].touched && AdminForm.controls['MobileNo'].hasError('required')" class="error d-flex justify-content-start m-0">Mobile Number is required</div>
+                   <span class="redColor" style="font-weight: bold;" id="phonenumber"> Phone number must be at least 9 characters long.</span>
+            </div>         
+            </div>
+            <div class="row mb-3">
+            <button class="btn  btn-success mx-auto"  [disabled]="!AdminForm.valid" (click)="createAdmin()">Create</button>    
+          </div>
+   <ngx-spinner bdColor = "rgba(51, 51, 51, 0.8)"size = "medium"
+   color = "white" type = "ball-clip-rotate" [fullScreen] = "true">
+   <p style="color: white; margin-top:50px;font-size: 26px;" > Loading... </p>
+   </ngx-spinner>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

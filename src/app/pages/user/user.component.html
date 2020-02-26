@@ -1,0 +1,144 @@
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <div class="card card-user">
+      <div class="card-header">
+        <h5 class="card-title">Edit Profile</h5>
+      </div>
+      <div class="card-body">
+        <form  [formGroup]="EditForm" >
+          <div class="row">
+                <div class="col-md-6 pr-1">
+                  <div class="form-group">
+                    <label>First Name</label>
+                    <input   formControlName="FirstName" type="text" class="form-control " value= "{{firstName}}" [(ngModel)]="firstName" placeholder="First name" >
+                    <div *ngIf="EditForm.controls['FirstName'].touched && EditForm.controls['FirstName'].hasError('required')" class="error-msg alert alert-danger text-left">First Name is required</div>
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label>Last Name</label>
+                    <input   formControlName="LastName" type="text" class="form-control   " value= "{{lastName}}" [(ngModel)]="lastName" placeholder="Last name" >
+                    <div *ngIf="EditForm.controls['LastName'].touched && EditForm.controls['LastName'].hasError('required')" class="error-msg alert alert-danger text-left">Last Name is required</div>
+                 </div>
+                </div>
+              </div>
+          <div class="row">
+           
+            <div class="col-md-6 pr-1">
+              <div class="form-group">
+                <label>Username</label>
+                <input   formControlName="UserName" type="text" class="form-control   " value= "{{userName}}" [(ngModel)]="userName" placeholder="User name" >
+                <div *ngIf="EditForm.controls['UserName'].touched && EditForm.controls['UserName'].hasError('required')" class="error-msg alert alert-danger text-left"> UserName is required</div>
+              </div>
+            </div>
+            <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label>Iqama Number</label>
+                    <input   formControlName="NID" type="text" class="form-control   " value= "{{NID}}" [(ngModel)]="NID" placeholder="National ID">
+                    <div *ngIf="EditForm.controls['NID'].touched && EditForm.controls['NID'].hasError('required')" class="error-msg alert alert-danger text-left">National ID is required</div>
+                    <div *ngIf="EditForm.controls['NID'].touched && EditForm.controls['NID'].hasError('minlength')" class="error-msg alert alert-danger text-left">National ID number must be at least 10 characters long.</div>
+                    </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-7"></div>
+                <button type="button" class="btn btn-warning btn-round col-md-2" (click)="EditInfo()">Edit </button>
+                <button type="button" class="btn btn-primary btn-round col-md-2" [disabled]="!SaveButton" (click)="SaveInfo()">Save</button>
+              </div>
+          <div class="row">
+            <div class="col-md-6 form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input matInput formControlName="Email" type="email" class="form-control " value= "{{email}}" [(ngModel)]="email" placeholder="email">
+                <div *ngIf="EditForm.controls['Email'].touched && EditForm.controls['Email'].hasError('required')" class="error-msg alert alert-danger text-left">Email is required</div>
+                <div *ngIf="EditForm.controls['Email'].touched && EditForm.controls['Email'].hasError('pattern')" class="error-msg alert alert-danger text-left">Enter proper Email.</div>
+            </div>
+            <div class="col-md-2"></div>
+            <button type="button" class="btn btn-primary btn-round col-md-3" [disabled]="!emailButton"  (click)="editEmail()" style="height: 40px !important; margin-top: 30px;">Change Email</button>
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Country Code</label>
+                <input matInput formControlName="CountryCode" type="text" class="form-control form-control-lg" value="{{countryCode}}" [(ngModel)]="countryCode" placeholder="+966" >
+                <div *ngIf="EditForm.controls['CountryCode'].touched && EditForm.controls['CountryCode'].hasError('required')" class="error-msg alert alert-danger text-left"> Country Code is required</div>
+            </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Mobile No.</label>
+                  <input matInput formControlName="MobileNo" type="text" class="form-control form-control-lg" value= "{{phone}}" [(ngModel)]="phone" placeholder="Mobile No." (keyup)="inputNumber($event)" digitOnly
+                  oninput="javascript: if (this.value.length >= 9) { document.getElementById('phonenumber').style.visibility = 'hidden'; }
+                  else { document.getElementById('phonenumber').style.visibility = 'visible'; }">
+                   <div *ngIf="EditForm.controls['MobileNo'].touched && EditForm.controls['MobileNo'].hasError('required')" class="error-msg alert alert-danger text-left">Mobile Number is required</div>
+                   <span class="redColor" id="phonenumber"> Phone number must be at least 9 characters long.</span>
+                  </div>
+              </div>
+              <div class="col-md-2"></div>
+              <button type="button" class="btn btn-primary btn-round col-md-3" [disabled]="!phoneButton"  (click)="editMobileNo()" style="height: 40px !important; margin-top: 30px;">Change Mobile No.</button>  
+          </div>
+         
+          <div *ngIf="showOTPstep">
+            <p style="font-size: 16px; font-weight: bold; color: #5c20d2" class="mt-5 mb-5 d-flex justify-content-center">Please enter your verification code to verify your mobile number.</p>
+            <div class="row mt-3 justify-content-center align-items-center phone-number-code">
+                <div class="form-group text-left col-lg-2 col-3 text-center">
+                    <input formControlName="One"  class="form-control form-control-lg" #one placeholder="0" type="number"  oninput="javascript: if (this.value.length > 1) this.value = this.value.slice(0, 1);" [(ngModel)]="first" (keyup)="keytab($event, 1)">
+                </div>
+                <div class="form-group text-left col-lg-2 col-3 text-center">
+                    <input formControlName="Two"  class="form-control form-control-lg" #two placeholder="0" type="number"  oninput="javascript: if (this.value.length > 1) this.value = this.value.slice(0, 1);" [(ngModel)]="second" (keyup)="keytab($event, 2)">
+                </div>
+                <div class="form-group text-left col-lg-2 col-3 text-center">
+                    <input formControlName="Three" class="form-control form-control-lg" #three placeholder="0" type="number"  oninput="javascript: if (this.value.length > 1) this.value = this.value.slice(0, 1);" [(ngModel)]="third" (keyup)="keytab($event, 3)">
+                </div>
+                <div class="form-group text-left col-lg-2 col-3 text-center">
+                    <input formControlName="Four" class="form-control form-control-lg" #four placeholder="0" type="number"  oninput="javascript: if (this.value.length > 1) this.value = this.value.slice(0, 1);" [(ngModel)]="Fourth" (keyup)="keytab($event, 4)">
+                </div>
+                 <div class="col-lg-11 mt-3 row justify-content-center align-items-center">
+                 <div class="form-group col-lg-6">
+                    <button class="btn btn-info btn-lg btn-block btn-black mt-2" (click)="ResendOTP()" >Resend</button>
+                    <ngx-spinner bdColor = "rgba(51, 51, 51, 0.8)"size = "medium"
+                  color = "white" type = "ball-clip-rotate" [fullScreen] = "true">
+                  <p style="color: white; margin-top:50px;font-size: 26px;" > Loading... </p>
+                  </ngx-spinner>
+                </div>
+                <div class="form-group col-lg-4">
+                    <button class="btn btn-info btn-lg btn-block btn-purple mt-2" (click)="verifyOTP()"  [disabled]="(!first && first!=0) || (!second && second!=0) ||(!third && third!=0) ||(!Fourth && Fourth!=0)">Verify</button>
+                </div>
+            </div>
+            </div>
+   </div>
+      
+   <ngx-spinner bdColor = "rgba(51, 51, 51, 0.8)"size = "medium"
+   color = "white" type = "ball-clip-rotate" [fullScreen] = "true">
+   <p style="color: white; margin-top:50px;font-size: 26px;" > Loading... </p>
+   </ngx-spinner>
+
+          <div class="row">
+            <div class="col-lg-12 mt-5"><h3 class="headingh3">Change Your Password</h3>
+              <div class="col-lg-8">
+                <label for="Name" class="font-bold mt-2">Old Password :</label>
+                <input  formControlName="OldPassword" type="password" class="form-control "  [(ngModel)]="oldPassword" placeholder="Type Old Password" >
+                <div *ngIf="EditForm.controls['OldPassword'].touched && EditForm.controls['OldPassword'].hasError('pattern')" class="error-msg alert alert-danger text-left">Old Password must contain Upper Cases Letter, Lower Cases Letter, Numbers, Special Characters (!, @, _, #, $ ..etc.) and at least 9 characters long.</div>
+            </div>
+            <div class="col-lg-8">
+              <label for="Name" class="font-bold mt-2">New Password :</label>
+              <input  formControlName="NewPassword" type="password" class="form-control "  [(ngModel)]="newPassword" placeholder="Type New Password" >
+              <div *ngIf="EditForm.controls['NewPassword'].touched && EditForm.controls['NewPassword'].hasError('pattern')" class="error-msg alert alert-danger text-left">New Password must contain Upper Cases Letter, Lower Cases Letter, Numbers, Special Characters (!, @, _, #, $ ..etc.) and at least 9 characters long.</div>
+            </div>
+          <div class="col-lg-8">
+            <label for="Name" class="font-bold mt-2">Confirm Password :</label>
+            <input  formControlName="ConfirmPassword" type="password" class="form-control " [(ngModel)]="confirmPassword" placeholder="Type Confirm Password" >
+            <div *ngIf="EditForm.controls['ConfirmPassword'].touched && EditForm.value.NewPassword != EditForm.value.ConfirmPassword" class="error-msg alert alert-danger text-left">Passwords must be same.</div>
+        </div>
+        </div>
+        <div class="col-lg-12 row justify-content-end py-4 mt-4" >
+            <button class="btn btn-round btn-warning col-md-3" style="height: 40px !important;" (click)="editPassword()">Change Password</button>
+             <button class="btn btn-round btn-primary col-md-2"  style="height: 40px !important;"[disabled]="!passwordButton" (click)="changeCurrentPassword()">Save</button>
+      </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

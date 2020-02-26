@@ -1,0 +1,59 @@
+
+<div class="sidebar-wrapper">
+  <div class="logo">
+    <a class="simple-text logo-mini">
+      <div class="logo-image-small">
+
+      </div>
+    </a>
+    <a class="simple-text logo-normal">
+      <img src="assets/img/logo.svg">
+    </a>
+  </div>
+
+  <ul class="nav">
+        <li *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}">
+            <a [routerLink]="[menuItem.path]">
+                <i class="nc-icon {{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+        <li routerLinkActive="active" >
+          <a [routerLink]="['/messages']">
+            <div class="d-flex justify-content-between w-100">
+              <i class="nc-icon nc-email-85 mr-0 "></i>
+              <p class="mr-4" style="height: 30px; overflow: hidden;">Contact-Us Messages</p>
+                <div class="style-count-no-msg" *ngIf="!showMessagesCount">
+                </div>
+                <div class="style-count mr-1 row padding" *ngIf="showMessagesCount">
+                  <p class="mx-auto" style="font-weight: bold; font-size: 10px; color: #5c20d2">{{messagesCount}}</p>
+                </div>
+                </div>
+          </a>
+      </li>
+        <li routerLinkActive="active" >
+          <a [routerLink]="['/notifications']">
+            <div class="d-flex justify-content-between w-100">
+              <i class="nc-icon nc-bell-55 mr-0"></i>
+              <p class="pr-5 mr-3">Notifications </p>
+                <div class="style-count-no-msg" *ngIf="!showCount">
+                </div>
+                <div class="style-count mr-2 row padding"  style="background-color: rgb(212, 177, 164);" *ngIf="showCount">
+                  <p  class="mx-auto" style="font-weight: bold; font-size: 10px; color: #5c20d2">{{notificationsCount}}</p>
+                </div>
+                </div>
+          </a>
+      </li>
+      <li routerLinkActive="active" >
+        <a [routerLink]="['/settings']">
+          <i class="mr-2 fa fa-cog" aria-hidden="true"></i>
+          <p>Portal Settings</p>
+      </a>
+    </li>
+    </ul>
+    <div class=" row" style=" text-align: center;">
+        <button class="btn btn-logout mt-2 col-lg-10 m-4" (click)="logout()">
+        
+        <span>Log out</span> </button>
+</div>
+</div>

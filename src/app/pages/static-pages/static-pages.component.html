@@ -1,0 +1,2316 @@
+<div class="row">
+  <div class="col-md-12">
+
+    <div class="card py-0 px-3" style="width: 100%;" >
+      <mat-tab-group mat-stretch-tabs>
+
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+   <!-- -------------------------- HOME PAGE ----------------------------- -->
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+
+        <mat-tab label="Home"> 
+          <div class="card-body py-2">
+            <div class="row">
+              <h2 class="mx-auto mt-5 " style="font-weight: bold; color: #5c20d2 !important;">
+                {{ Home.page_name }}
+              </h2>
+            </div>
+            <hr>
+
+          <div class="row">
+                <div class="col-lg-12">
+                <mat-tab-group mat-stretch-tabs>
+                  <mat-tab label="English"> 
+                      <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Home.Section1.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control"  [(ngModel)]="Home.Section1.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="Home.Section1.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Home.Section2.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="Home.Section2.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="Home.Section2.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Home.Section3.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="Home.Section3.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="Home.Section3.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Home.Section4.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="Home.Section4.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="Home.Section4.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Home.Section5.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="Home.Section5.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="Home.Section5.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    </mat-tab>
+                  <mat-tab label="Arabic"> 
+                    <div dir="rtl">
+                    <div class="row mt-3" > 
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Home.Section1.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto" >
+                          <label class="style-label-ar" >  عنوان القسم :</label>
+                          <input type="text" class="form-control" [(ngModel)]="Home.Section1.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="Home.Section1.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Home.Section2.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="Home.Section2.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="Home.Section2.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Home.Section3.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="Home.Section3.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="Home.Section3.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Home.Section4.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="Home.Section4.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="Home.Section4.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Home.Section5.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="Home.Section5.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="Home.Section5.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </mat-tab>
+                </mat-tab-group>
+              </div>
+            </div>
+            
+          </div>
+          <hr>
+          <div class="card-footer">
+            <div class="d-flex justify-content-center">
+              <button class=" my-3 btn btn-success btn-lg " (click)="saveHomePage()">Save Home Page</button>
+            </div>
+  
+          </div>
+        </mat-tab>
+
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ----------------------- Who We Are PAGE -------------------------- -->
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+
+
+        <mat-tab label="Who We Are">
+           <div class="card-body py-2">
+            <div class="row w-100">
+              <h2 class="mx-auto mt-5 " style="font-weight: bold; color: #5c20d2 !important;">
+                {{ Who_We_Are.page_name }}
+              </h2>
+            </div>
+            <hr>
+
+          <div class="row">
+
+                <div class="col-lg-12">
+                  <mat-tab-group mat-stretch-tabs>
+                    <mat-tab label="English"> 
+                      <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Who_We_Are.Section1.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="Who_We_Are.Section1.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="Who_We_Are.Section1.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Who_We_Are.Section2.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="Who_We_Are.Section2.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="Who_We_Are.Section2.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Who_We_Are.Section3.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="Who_We_Are.Section3.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="Who_We_Are.Section3.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Who_We_Are.Section4.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="Who_We_Are.Section4.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="Who_We_Are.Section4.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Who_We_Are.Section5.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="Who_We_Are.Section5.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="Who_We_Are.Section5.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                  
+                    </mat-tab>
+                    <mat-tab label="Arabic"> 
+                      <div dir="rtl">
+                      <div class="row mt-3" > 
+  
+                        <h3 class="col-lg-8 mx-auto">
+                         <b> SECTION NAME : </b>{{Who_We_Are.Section1.section_name}}
+                        </h3>
+                        <div class="col-lg-8 form-group mx-auto" >
+                            <label class="style-label-ar" >  عنوان القسم :</label>
+                            <input type="text" class="form-control" [(ngModel)]="Who_We_Are.Section1.TitleAr" >
+                        </div>
+                      </div>
+                        
+                      <div class="row mt-2">
+                        <div class="col-lg-8 form-group mx-auto card-text">
+                          <label class="style-label-ar">محتوى القسم:</label>
+                          <div class="input-group">
+                            <textarea rows="6" cols="100"  [(ngModel)]="Who_We_Are.Section1.ContentAr"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+  
+                        <h3 class="col-lg-8 mx-auto">
+                         <b> SECTION NAME : </b>{{Who_We_Are.Section2.section_name}}
+                        </h3>
+                        <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label-ar" >  عنوان القسم :</label>
+                          <input type="text" class="form-control" [(ngModel)]="Who_We_Are.Section2.TitleAr" >
+                        </div>
+                      </div>
+                        
+                      <div class="row mt-2">
+                        <div class="col-lg-8 form-group mx-auto card-text">
+                          <label class="style-label-ar">محتوى القسم:</label>
+                          <div class="input-group">
+                            <textarea rows="6" cols="100"  [(ngModel)]="Who_We_Are.Section2.ContentAr"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+  
+                        <h3 class="col-lg-8 mx-auto">
+                         <b> SECTION NAME : </b>{{Who_We_Are.Section3.section_name}}
+                        </h3>
+                        <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label-ar" >  عنوان القسم :</label>
+                          <input type="text" class="form-control" [(ngModel)]="Who_We_Are.Section3.TitleAr" >
+                        </div>
+                      </div>
+                        
+                      <div class="row mt-2">
+                        <div class="col-lg-8 form-group mx-auto card-text">
+                          <label class="style-label-ar">محتوى القسم:</label>
+                          <div class="input-group">
+                            <textarea rows="6" cols="100"  [(ngModel)]="Who_We_Are.Section3.ContentAr"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+  
+                        <h3 class="col-lg-8 mx-auto">
+                         <b> SECTION NAME : </b>{{Who_We_Are.Section4.section_name}}
+                        </h3>
+                        <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label-ar" >  عنوان القسم :</label>
+                          <input type="text" class="form-control" [(ngModel)]="Who_We_Are.Section4.TitleAr" >
+                        </div>
+                      </div>
+                        
+                      <div class="row mt-2">
+                        <div class="col-lg-8 form-group mx-auto card-text">
+                          <label class="style-label-ar">محتوى القسم:</label>
+                          <div class="input-group">
+                            <textarea rows="6" cols="100"  [(ngModel)]="Who_We_Are.Section4.ContentAr"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+
+                        <h3 class="col-lg-8 mx-auto">
+                         <b> SECTION NAME : </b>{{Who_We_Are.Section5.section_name}}
+                        </h3>
+                        <div class="col-lg-8 form-group mx-auto">
+                            <label class="style-label">Section Title:</label>
+                            <input type="text" class="form-control" [(ngModel)]="Who_We_Are.Section5.TitleAr" >
+                        </div>
+                      </div>
+                        
+                      <div class="row mt-2">
+                        <div class="col-lg-8 form-group mx-auto card-text">
+                          <label class="style-label">Section Content:</label>
+                          <div class="input-group">
+                            <textarea rows="6" cols="100"  [(ngModel)]="Who_We_Are.Section5.ContentAr"></textarea>
+                          </div>
+                        </div>
+                      </div>
+  
+   
+                    </div>
+                    </mat-tab>
+                </mat-tab-group>
+              </div>
+            </div>
+            
+          </div> 
+          <hr>
+          <div class="card-footer">
+            <div class="d-flex justify-content-center">
+              <button class=" my-3 btn btn-success btn-lg " (click)="saveWhoWeArePage()">Save Who We Are Page</button>
+            </div>
+  
+          </div>
+
+        </mat-tab>
+
+
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+   <!-- --------------------------- Lender PAGE -------------------------- -->
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+
+
+        <mat-tab label="Lender">
+          <div class="card-body py-2">
+            <div class="row">
+              <h2 class="mx-auto mt-5 " style="font-weight: bold; color: #5c20d2 !important;">
+                {{ LenderPage.page_name }}
+              </h2>
+            </div>
+            <hr>
+
+          <div class="row">
+                <div class="col-lg-12">
+                <mat-tab-group mat-stretch-tabs>
+                  <mat-tab label="English"> 
+                      <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section1.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control"  [(ngModel)]="LenderPage.Section1.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="LenderPage.Section1.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section2.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="LenderPage.Section2.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="LenderPage.Section2.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section3.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="LenderPage.Section3.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="LenderPage.Section3.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section4.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="LenderPage.Section4.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="LenderPage.Section4.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section5.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="LenderPage.Section5.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="LenderPage.Section5.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section6.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="LenderPage.Section6.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="LenderPage.Section6.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section7.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="LenderPage.Section7.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="LenderPage.Section7.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section8.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="LenderPage.Section8.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="LenderPage.Section8.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section9.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="LenderPage.Section9.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 1 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section9.Content1En"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 2 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section9.Content2En"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 3 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section9.Content3En"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 4 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section9.Content4En"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section10.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="LenderPage.Section10.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 1 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section10.Content1En"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 2 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section10.Content2En"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 3 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section10.Content3En"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section11.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="LenderPage.Section11.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 1 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section11.Content1En"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 2 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section11.Content2En"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 3 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section11.Content3En"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 4 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section11.Content4En"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 5 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section11.Content5En"></textarea>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    </mat-tab>
+                  <mat-tab label="Arabic"> 
+                    <div dir="rtl">
+                    <div class="row mt-3" > 
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section1.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto" >
+                          <label class="style-label-ar" >  عنوان القسم :</label>
+                          <input type="text" class="form-control" [(ngModel)]="LenderPage.Section1.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="LenderPage.Section1.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section2.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="LenderPage.Section2.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="LenderPage.Section2.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section3.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="LenderPage.Section3.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="LenderPage.Section3.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section4.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="LenderPage.Section4.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="LenderPage.Section4.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section5.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="LenderPage.Section5.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="LenderPage.Section5.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section6.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="LenderPage.Section6.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="LenderPage.Section6.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section7.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="LenderPage.Section7.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="LenderPage.Section7.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section8.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="LenderPage.Section8.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="LenderPage.Section8.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section9.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="LenderPage.Section9.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 1 القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section9.Content1Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 2  القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section9.Content2Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 3  القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section9.Content3Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى  4 القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section9.Content4Ar"></textarea>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section10.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="LenderPage.Section10.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 1 القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section10.Content1Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 2  القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section10.Content2Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 3  القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section10.Content3Ar"></textarea>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{LenderPage.Section11.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="LenderPage.Section11.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 1 القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section11.Content1Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 2  القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section11.Content2Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 3  القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section11.Content3Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى  4 القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section11.Content4Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى  5 القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="LenderPage.Section11.Content5Ar"></textarea>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                  </div>
+                  </mat-tab>
+                </mat-tab-group>
+              </div>
+            </div>
+            
+          </div>
+          <hr>
+          <div class="card-footer">
+            <div class="d-flex justify-content-center">
+              <button class=" my-3 btn btn-success btn-lg " (click)="saveLenderPage()">Save Lender Page</button>
+            </div>
+  
+          </div>
+
+        </mat-tab>
+
+        
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+   <!-- --------------------------- Borrower PAGE ------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+
+
+        <mat-tab label="Borrower">
+          <div class="card-body py-2">
+            <div class="row">
+              <h2 class="mx-auto mt-5 " style="font-weight: bold; color: #5c20d2 !important;">
+                {{ BorrowerPage.page_name }}
+              </h2>
+            </div>
+            <hr>
+
+          <div class="row">
+                <div class="col-lg-12">
+                <mat-tab-group mat-stretch-tabs>
+                  <mat-tab label="English"> 
+                      <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section1.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control"  [(ngModel)]="BorrowerPage.Section1.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="BorrowerPage.Section1.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section2.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section2.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="BorrowerPage.Section2.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section3.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section3.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="BorrowerPage.Section3.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section4.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section4.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="BorrowerPage.Section4.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section5.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section5.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="BorrowerPage.Section5.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section6.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section6.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="BorrowerPage.Section6.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section7.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section7.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="BorrowerPage.Section7.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section8.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section8.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="BorrowerPage.Section8.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section9.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section9.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 1 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section9.Content1En"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 2 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section9.Content2En"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 3 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section9.Content3En"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 4 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section9.Content4En"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section10.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section10.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 1 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section10.Content1En"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 2 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section10.Content2En"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 3 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section10.Content3En"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section11.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section11.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 1 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section11.Content1En"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 2 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section11.Content2En"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 3 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section11.Content3En"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 4 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section11.Content4En"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section 5 Content:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section11.Content5En"></textarea>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    </mat-tab>
+                  <mat-tab label="Arabic"> 
+                    <div dir="rtl">
+                    <div class="row mt-3" > 
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section1.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto" >
+                          <label class="style-label-ar" >  عنوان القسم :</label>
+                          <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section1.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="BorrowerPage.Section1.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section2.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section2.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="BorrowerPage.Section2.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section3.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section3.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="BorrowerPage.Section3.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section4.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section4.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="BorrowerPage.Section4.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section5.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section5.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="BorrowerPage.Section5.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section6.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section6.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="BorrowerPage.Section6.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section7.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section7.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="BorrowerPage.Section7.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section8.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section8.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="BorrowerPage.Section8.ContentAr"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section9.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section9.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 1 القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section9.Content1Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 2  القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section9.Content2Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 3  القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section9.Content3Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى  4 القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section9.Content4Ar"></textarea>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section10.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section10.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 1 القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section10.Content1Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 2  القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section10.Content2Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 3  القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section10.Content3Ar"></textarea>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{BorrowerPage.Section11.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                        <label class="style-label-ar" >  عنوان القسم :</label>
+                        <input type="text" class="form-control" [(ngModel)]="BorrowerPage.Section11.TitleAr" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 1 القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section11.Content1Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 2  القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section11.Content2Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى 3  القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section11.Content3Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى  4 القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section11.Content4Ar"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label-ar">محتوى  5 القسم:</label>
+                        <div class="input-group">
+                          <textarea rows="3" cols="100"  [(ngModel)]="BorrowerPage.Section11.Content5Ar"></textarea>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                  </div>
+                  </mat-tab>
+                </mat-tab-group>
+              </div>
+            </div>
+            
+          </div>
+          <hr>
+          <div class="card-footer">
+            <div class="d-flex justify-content-center">
+              <button class=" my-3 btn btn-success btn-lg " (click)="saveBorrowerPage()">Save Borrower Page</button>
+            </div>
+  
+          </div>
+
+        </mat-tab>
+
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ----------------------- Contact US PAGE -------------------------- -->
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+
+
+        <mat-tab label="Contact Us">
+          <div class="card-body py-2">
+            <div class="row w-100">
+              <h2 class="mx-auto mt-5 " style="font-weight: bold; color: #5c20d2 !important;">
+                {{ Contact_Us.page_name }}
+              </h2>
+            </div>
+            <hr>
+          <div class="row">
+
+                <div class="col-lg-12">
+                  <mat-tab-group mat-stretch-tabs>
+                    <mat-tab label="English"> 
+                      <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Contact_Us.Section1.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="Contact_Us.Section1.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="6" cols="100"  [(ngModel)]="Contact_Us.Section1.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Contact_Us.Section2.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="Contact_Us.Section2.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="2" cols="100"  [(ngModel)]="Contact_Us.Section2.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Contact_Us.Section3.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="Contact_Us.Section3.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="2" cols="100"  [(ngModel)]="Contact_Us.Section3.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Contact_Us.Section4.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="Contact_Us.Section4.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="2" cols="100"  [(ngModel)]="Contact_Us.Section4.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Contact_Us.Section5.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="Contact_Us.Section5.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="2" cols="100"  [(ngModel)]="Contact_Us.Section5.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Contact_Us.Section6.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="Contact_Us.Section6.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="2" cols="100"  [(ngModel)]="Contact_Us.Section6.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                      <h3 class="col-lg-8 mx-auto">
+                       <b> SECTION NAME : </b>{{Contact_Us.Section7.section_name}}
+                      </h3>
+                      <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label">Section Title:</label>
+                          <input type="text" class="form-control" [(ngModel)]="Contact_Us.Section7.TitleEn" >
+                      </div>
+                    </div>
+                      
+                    <div class="row mt-2">
+                      <div class="col-lg-8 form-group mx-auto card-text">
+                        <label class="style-label">Section Content:</label>
+                        <div class="input-group">
+                          <textarea rows="2" cols="100"  [(ngModel)]="Contact_Us.Section7.ContentEn"></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                  
+                    </mat-tab>
+                    <mat-tab label="Arabic"> 
+                      <div dir="rtl">
+                      <div class="row mt-3" > 
+  
+                        <h3 class="col-lg-8 mx-auto">
+                         <b> SECTION NAME : </b>{{Contact_Us.Section1.section_name}}
+                        </h3>
+                        <div class="col-lg-8 form-group mx-auto" >
+                            <label class="style-label-ar" >  عنوان القسم :</label>
+                            <input type="text" class="form-control" [(ngModel)]="Contact_Us.Section1.TitleAr" >
+                        </div>
+                      </div>
+                        
+                      <div class="row mt-2">
+                        <div class="col-lg-8 form-group mx-auto card-text">
+                          <label class="style-label-ar">محتوى القسم:</label>
+                          <div class="input-group">
+                            <textarea rows="6" cols="100"  [(ngModel)]="Contact_Us.Section1.ContentAr"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+
+                        <h3 class="col-lg-8 mx-auto">
+                         <b> SECTION NAME : </b>{{Contact_Us.Section2.section_name}}
+                        </h3>
+                        <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label-ar" >  عنوان القسم :</label>
+                          <input type="text" class="form-control" [(ngModel)]="Contact_Us.Section2.TitleAr" >
+                        </div>
+                      </div>
+                        
+                      <div class="row mt-2">
+                        <div class="col-lg-8 form-group mx-auto card-text">
+                          <label class="style-label-ar">محتوى القسم:</label>
+                          <div class="input-group">
+                            <textarea rows="2" cols="100" class="dir-ltr"  [(ngModel)]="Contact_Us.Section2.ContentAr"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+  
+                        <h3 class="col-lg-8 mx-auto">
+                         <b> SECTION NAME : </b>{{Contact_Us.Section3.section_name}}
+                        </h3>
+                        <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label-ar" >  عنوان القسم :</label>
+                          <input type="text" class="form-control" [(ngModel)]="Contact_Us.Section3.TitleAr" >
+                        </div>
+                      </div>
+                        
+                      <div class="row mt-2">
+                        <div class="col-lg-8 form-group mx-auto card-text">
+                          <label class="style-label-ar">محتوى القسم:</label>
+                          <div class="input-group">
+                            <textarea rows="2" cols="100" class="dir-ltr"  [(ngModel)]="Contact_Us.Section3.ContentAr"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+  
+                        <h3 class="col-lg-8 mx-auto">
+                         <b> SECTION NAME : </b>{{Contact_Us.Section4.section_name}}
+                        </h3>
+                        <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label-ar" >  عنوان القسم :</label>
+                          <input type="text" class="form-control" [(ngModel)]="Contact_Us.Section4.TitleAr" >
+                        </div>
+                      </div>
+                        
+                      <div class="row mt-2">
+                        <div class="col-lg-8 form-group mx-auto card-text">
+                          <label class="style-label-ar">محتوى القسم:</label>
+                          <div class="input-group">
+                            <textarea rows="2" cols="100" class="dir-ltr"  [(ngModel)]="Contact_Us.Section4.ContentAr"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+  
+                        <h3 class="col-lg-8 mx-auto">
+                         <b> SECTION NAME : </b>{{Contact_Us.Section5.section_name}}
+                        </h3>
+                        <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label-ar" >  عنوان القسم :</label>
+                          <input type="text" class="form-control" [(ngModel)]="Contact_Us.Section5.TitleAr" >
+                        </div>
+                      </div>
+                        
+                      <div class="row mt-2">
+                        <div class="col-lg-8 form-group mx-auto card-text">
+                          <label class="style-label-ar">محتوى القسم:</label>
+                          <div class="input-group">
+                            <textarea rows="2" cols="100" class="dir-ltr"  [(ngModel)]="Contact_Us.Section5.ContentAr"></textarea>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="row mt-3">
+  
+                        <h3 class="col-lg-8 mx-auto">
+                         <b> SECTION NAME : </b>{{Contact_Us.Section6.section_name}}
+                        </h3>
+                        <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label-ar" >  عنوان القسم :</label>
+                          <input type="text" class="form-control" [(ngModel)]="Contact_Us.Section6.TitleAr" >
+                        </div>
+                      </div>
+                        
+                      <div class="row mt-2">
+                        <div class="col-lg-8 form-group mx-auto card-text">
+                          <label class="style-label-ar">محتوى القسم:</label>
+                          <div class="input-group">
+                            <textarea rows="2" cols="100" class="dir-ltr" [(ngModel)]="Contact_Us.Section6.ContentAr"></textarea>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="row mt-3">
+  
+                        <h3 class="col-lg-8 mx-auto">
+                         <b> SECTION NAME : </b>{{Contact_Us.Section7.section_name}}
+                        </h3>
+                        <div class="col-lg-8 form-group mx-auto">
+                          <label class="style-label-ar" >  عنوان القسم :</label>
+                          <input type="text" class="form-control" [(ngModel)]="Contact_Us.Section7.TitleAr" >
+                        </div>
+                      </div>
+                        
+                      <div class="row mt-2">
+                        <div class="col-lg-8 form-group mx-auto card-text">
+                          <label class="style-label-ar">محتوى القسم:</label>
+                          <div class="input-group">
+                            <textarea rows="2" cols="100" class="dir-ltr" [(ngModel)]="Contact_Us.Section7.ContentAr"></textarea>
+                          </div>
+                        </div>
+                      </div>
+  
+   
+                    </div>
+                    </mat-tab>
+                </mat-tab-group>
+              </div>
+            </div>
+            
+          </div> 
+          <hr>
+          <div class="card-footer">
+            <div class="d-flex justify-content-center">
+              <button class=" my-3 btn btn-success btn-lg " (click)="saveContactPage()">Save Contact Us Page</button>
+            </div>
+          </div>
+
+        </mat-tab>
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ----------------------- Terms And Conditions PAGE ---------------- -->
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+
+   <mat-tab label="Terms And Conditions">
+    <div class="card-body py-2">
+      <div class="row w-100">
+        <h2 class="mx-auto mt-5 " style="font-weight: bold; color: #5c20d2 !important;">
+          {{ TermsConditions.page_name }}
+        </h2>
+      </div>
+      <hr>
+
+    <div class="row">
+
+          <div class="col-lg-12">
+            <mat-tab-group mat-stretch-tabs>
+              <mat-tab label="English"> 
+                <div class="row mt-3">
+
+                <h3 class="col-lg-8 mx-auto">
+                 <b> SECTION NAME : </b>{{TermsConditions.Section.section_name}}
+                </h3>
+                <div class="col-lg-8 form-group mx-auto">
+                    <label class="style-label">Section Title:</label>
+                    <input type="text" class="form-control" [(ngModel)]="TermsConditions.Section.TitleEn" >
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-lg-8 form-group mx-auto card-text">
+                  <label class="style-label">Section Content:</label>
+                  <div class="input-group">
+                    <textarea rows="5" cols="100"  [(ngModel)]="TermsConditions.Section.ContentEn"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-lg-8 form-group mx-auto card-text">
+                  <label class="style-label">Paragraph:</label>
+                  <div class="input-group">
+                    <textarea rows="8" cols="100"  [(ngModel)]="TermsConditions.Section.ParagraphEn"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-3" *ngFor="let bulletpoint of TermsConditions.Section.EnBulletPoints; let i = index;" >
+                <a class="close-icon" (click)="removeBulletPointEn(i)"><img src="assets/img/close.svg"></a>
+                <div class="col-lg-8 form-group mx-auto card-text">
+                    <label  class="style-label">Bullet Point {{i+1}} :</label>
+                    <div class="input-group">
+                      <textarea rows="3" cols="100"  [(ngModel)]="bulletpoint.bulletPoint"></textarea>
+                    </div>
+                </div>
+              </div>
+
+              <div class="row my-3" style="width: 100%;">
+                <div class="col-lg-4"></div>
+                <button class=" btn col-lg-4 btn-outline-warning mt-3" (click)="addMoreBulletPointEn()" >
+                 
+                   <i class="fa fa-plus-circle" aria-hidden="true"></i>
+
+                   Add More Points
+              </button>
+              </div>
+              
+            
+              </mat-tab>
+              <mat-tab label="Arabic"> 
+                <div dir="rtl">
+                <div class="row mt-3" > 
+
+                  <h3 class="col-lg-8 mx-auto">
+                    <b> SECTION NAME : </b>{{TermsConditions.Section.section_name}}
+                   </h3>
+                   <div class="col-lg-8 form-group mx-auto">
+                    <label class="style-label-ar" >  عنوان القسم :</label>
+                    <input type="text" class="form-control" [(ngModel)]="TermsConditions.Section.TitleAr" >
+                   </div>
+                 </div>
+                 <div class="row mt-2">
+                   <div class="col-lg-8 form-group mx-auto card-text">
+                    <label class="style-label-ar">محتوى القسم:</label>
+                    <div class="input-group">
+                       <textarea rows="5" cols="100"  [(ngModel)]="TermsConditions.Section.ContentAr"></textarea>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="row mt-2">
+                   <div class="col-lg-8 form-group mx-auto card-text">
+                     <label class="style-label-ar">فقرة:</label>
+                     <div class="input-group">
+                       <textarea rows="8" cols="100"  [(ngModel)]="TermsConditions.Section.ParagraphAr"></textarea>
+                     </div>
+                   </div>
+                 </div>
+
+                 <div class="row mb-3" *ngFor="let bulletpoint of TermsConditions.Section.ArBulletPoints; let i = index;" >
+                  <a class="close-icon" (click)="removeBulletPointAr(i)"><img src="assets/img/close.svg"></a>
+                  <div class="col-lg-8 form-group mx-auto card-text">
+                      <label  class="style-label-ar">  نقطة رصاصة {{i+1}}:</label>
+                      <div class="input-group">
+                        <textarea rows="3" cols="100"  [(ngModel)]="bulletpoint.bulletPoint"></textarea>
+                      </div>
+                  </div>
+                </div>
+  
+                <div class="row my-3" style="width: 100%;">
+                  <div class="col-lg-4"></div>
+                  <button class="dir-ltr btn col-lg-4 btn-outline-warning mt-3" (click)="addMoreBulletPointAr()" >
+                     <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                     Add More Points
+                </button>
+                </div>
+
+              </div>
+              </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+      
+    </div> 
+    <hr>
+    <div class="card-footer">
+      <div class="d-flex justify-content-center">
+        <button class=" my-3 btn btn-success btn-lg " (click)="saveTermsConditionsPage()">Save Terms And Conditions Page</button>
+      </div>
+
+    </div>
+   </mat-tab>
+
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ----------------------- FAQ Lender PAGE -------------------------- -->
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+
+   <mat-tab label="FAQ Lender">
+    <div class="card-body py-2">
+      <div class="row w-100">
+        <h2 class="mx-auto mt-5 " style="font-weight: bold; color: #5c20d2 !important;">
+          {{ FAQ_Lender.page_name }}
+        </h2>
+      </div>
+      <hr>
+
+    <div class="row">
+
+          <div class="col-lg-12">
+            <mat-tab-group mat-stretch-tabs>
+              <mat-tab label="English"> 
+                <div class="row mt-3">
+
+                <div class="col-lg-8 form-group mx-auto">
+                    <label class="style-label">Section Title:</label>
+                    <input type="text" class="form-control" [(ngModel)]="FAQ_Lender.Section.TitleEn" >
+                </div>
+              </div>
+
+              <div class="row mb-3" *ngFor="let ques_ans of FAQ_Lender.Section.En_QA; let i = index;" >
+                <a class="close-icon" (click)="removeEn_QALender(i)"><img src="assets/img/close.svg"></a>
+                <div class="col-lg-8 form-group mx-auto card-text">
+                    <label  class="style-label">Question No. {{i+1}} :</label>
+                    <div class="input-group">
+                      <textarea rows="3" cols="100"  [(ngModel)]="ques_ans.EnQuestion"></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-8 form-group mx-auto card-text">
+                  <label  class="style-label">Answer No. {{i+1}} :</label>
+                  <div class="input-group">
+                    <textarea rows="3" cols="100"  [(ngModel)]="ques_ans.EnAnswer"></textarea>
+                  </div>
+              </div>
+
+              </div>
+
+              <div class="row my-3" style="width: 100%;">
+                <div class="col-lg-4"></div>
+                <button class=" btn col-lg-4 btn-outline-warning mt-3" (click)="addEn_QALender()" >
+                 
+                   <i class="fa fa-plus-circle" aria-hidden="true"></i>
+
+                   Add More Questions
+              </button>
+              </div>
+              
+            
+              </mat-tab>
+              <mat-tab label="Arabic"> 
+                <div dir="rtl">
+                <div class="row mt-3" > 
+
+
+                  <div class="col-lg-8 form-group mx-auto">
+                    <label class="style-label-ar" >  عنوان القسم :</label>
+                    <input type="text" class="form-control" [(ngModel)]="FAQ_Lender.Section.TitleAr" >
+                   </div>
+                 </div>
+
+                 
+                 <div class="row mb-3" *ngFor="let ques_ans of FAQ_Lender.Section.Ar_QA; let i = index;" >
+                  <a class="close-icon" (click)="removeAr_QALender(i)"><img src="assets/img/close.svg"></a>
+                  <div class="col-lg-8 form-group mx-auto card-text">
+                      <label  class="style-label-ar"> سؤال رقم {{i+1}}:</label>
+                      <div class="input-group">
+                        <textarea rows="3" cols="100"  [(ngModel)]="ques_ans.ArQuestion"></textarea>
+                      </div>
+                  </div>
+                  <div class="col-lg-8 form-group mx-auto card-text">
+                    <label  class="style-label-ar"> الإجابة رقم {{i+1}}:</label>
+                    <div class="input-group">
+                      <textarea rows="3" cols="100"  [(ngModel)]="ques_ans.ArAnswer"></textarea>
+                    </div>
+                </div>
+                </div>
+  
+                <div class="row my-3" style="width: 100%;">
+                  <div class="col-lg-4"></div>
+                  <button class="dir-ltr btn col-lg-4 btn-outline-warning mt-3" (click)="addAr_QALender()" >
+                     <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                     Add More Questions
+                </button>
+                </div>
+
+              </div>
+              </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+      
+    </div> 
+    <hr>
+    <div class="card-footer">
+      <div class="d-flex justify-content-center">
+        <button class=" my-3 btn btn-success btn-lg " (click)="saveFAQLenderPage()">Save FAQ Lender Page</button>
+      </div>
+
+    </div>
+   </mat-tab>
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ----------------------- FAQ Borrower PAGE ------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+   <!-- ------------------------------------------------------------------ -->
+
+   <mat-tab label="FAQ Borrower">
+    <div class="card-body py-2">
+      <div class="row w-100">
+        <h2 class="mx-auto mt-5 " style="font-weight: bold; color: #5c20d2 !important;">
+          {{ FAQ_Borrower.page_name }}
+        </h2>
+      </div>
+      <hr>
+
+    <div class="row">
+
+          <div class="col-lg-12">
+            <mat-tab-group mat-stretch-tabs>
+              <mat-tab label="English"> 
+                <div class="row mt-3">
+
+                <div class="col-lg-8 form-group mx-auto">
+                    <label class="style-label">Section Title:</label>
+                    <input type="text" class="form-control" [(ngModel)]="FAQ_Borrower.Section.TitleEn" >
+                </div>
+              </div>
+
+              <div class="row mb-3" *ngFor="let ques_ans of FAQ_Borrower.Section.En_QA; let i = index;" >
+                <a class="close-icon" (click)="removeEn_QABorrower(i)"><img src="assets/img/close.svg"></a>
+                <div class="col-lg-8 form-group mx-auto card-text">
+                    <label  class="style-label">Question No. {{i+1}} :</label>
+                    <div class="input-group">
+                      <textarea rows="3" cols="100"  [(ngModel)]="ques_ans.EnQuestion"></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-8 form-group mx-auto card-text">
+                  <label  class="style-label">Answer No. {{i+1}} :</label>
+                  <div class="input-group">
+                    <textarea rows="3" cols="100"  [(ngModel)]="ques_ans.EnAnswer"></textarea>
+                  </div>
+              </div>
+
+              </div>
+
+              <div class="row my-3" style="width: 100%;">
+                <div class="col-lg-4"></div>
+                <button class=" btn col-lg-4 btn-outline-warning mt-3" (click)="addEn_QABorrower()" >
+                 
+                   <i class="fa fa-plus-circle" aria-hidden="true"></i>
+
+                   Add More Questions
+              </button>
+              </div>
+              
+            
+              </mat-tab>
+              <mat-tab label="Arabic"> 
+                <div dir="rtl">
+                <div class="row mt-3" > 
+
+
+                  <div class="col-lg-8 form-group mx-auto">
+                    <label class="style-label-ar" >  عنوان القسم :</label>
+                    <input type="text" class="form-control" [(ngModel)]="FAQ_Borrower.Section.TitleAr" >
+                   </div>
+                 </div>
+
+                 
+                 <div class="row mb-3" *ngFor="let ques_ans of FAQ_Borrower.Section.Ar_QA; let i = index;" >
+                  <a class="close-icon" (click)="removeAr_QABorrower(i)"><img src="assets/img/close.svg"></a>
+                  <div class="col-lg-8 form-group mx-auto card-text">
+                      <label  class="style-label-ar"> سؤال رقم {{i+1}}:</label>
+                      <div class="input-group">
+                        <textarea rows="3" cols="100"  [(ngModel)]="ques_ans.ArQuestion"></textarea>
+                      </div>
+                  </div>
+                  <div class="col-lg-8 form-group mx-auto card-text">
+                    <label  class="style-label-ar"> الإجابة رقم {{i+1}}:</label>
+                    <div class="input-group">
+                      <textarea rows="3" cols="100"  [(ngModel)]="ques_ans.ArAnswer"></textarea>
+                    </div>
+                </div>
+                </div>
+  
+                <div class="row my-3" style="width: 100%;">
+                  <div class="col-lg-4"></div>
+                  <button class="dir-ltr btn col-lg-4 btn-outline-warning mt-3" (click)="addAr_QABorrower()" >
+                     <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                     Add More Questions
+                </button>
+                </div>
+
+              </div>
+              </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+      
+    </div> 
+    <hr>
+    <div class="card-footer">
+      <div class="d-flex justify-content-center">
+        <button class=" my-3 btn btn-success btn-lg " (click)="saveFAQBorrowerPage()">Save FAQ Borrower Page</button>
+      </div>
+
+    </div>
+   </mat-tab>
+
+    </mat-tab-group>
+
+     </div>
+
+        <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="medium" color="white" type="ball-clip-rotate"
+      [fullScreen]="true">
+      <p style="color: white; margin-top:50px;font-size: 26px;">Loading...</p>
+    </ngx-spinner>
+  </div>
+</div>

@@ -1,0 +1,204 @@
+<div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+              <div class="w3-xlarge  col-lg-2 p-0" style="text-align: center;">  <button class="back-btn btn-sm" [routerLink]="['/funders']"><i class="fa fa-chevron-left" ></i> Back</button> </div>
+              <div class="p-0 col-lg-9">
+                  <h2 class="m-0"style="margin-left: 10px; "><u>Funder Details</u></h2>
+                </div>   
+            </div>     
+      </div>
+      <div class="card-body my-3 ">
+          <form class="col-lg-10 row antim-form p-3 mt-2 mb-5 m-auto"  [formGroup]="BalanceForm" *ngIf="showBalance">
+              <div class="row" style="width: 100%;">
+                  <div class="col-lg-5">
+                      <label class="font-bold "> Add/Update Balance: </label>
+                      <input matInput formControlName="balance" class="form-control input" digitOnly [(ngModel)]="Balance" (keyup)="inputNumber($event)"
+                      oninput="javascript: if (this.value <= 10000) { document.getElementById('errror').style.visibility = 'hidden'; }
+                      else { document.getElementById('errror').style.visibility = 'visible'; }">  
+                    <span class="redColor" id="errror">You Can not add balance more than 10,000 SAR.</span>
+                  </div>
+                  <div class="col-lg-2 " ></div>
+                  <div class="col-lg-3 mt-4" >
+                      <button class="btn btn-success "  (click)="AddBalance()">Add Balance </button>
+                  </div>
+                  <div class="col-lg-2 mt-4" >
+                      <button class="btn btn-primary " [disabled]="!disableSaveButton" (click)="SaveBalance()">Save </button>
+                  </div>
+              </div>
+          </form>
+
+          <form class="col-lg-10 row antim-form p-3 mt-2 mb-5 m-auto"  *ngIf="showStatusHeading">
+            <div class="col-lg-12" style="text-align: center;"><h3>Change Funder Status</h3>
+              </div>
+                <div class="row" style="width: 100%;" *ngIf="showActivateButton && !showStatus"> 
+                <div class="col-lg-9" ></div>
+                <div class="col-lg-3">
+                    <button class="btn  btn-success "  (click)="OpenActivatePopup(content1)">Activate User </button>
+                </div>
+              </div>
+               <div class="row" style="width: 100%;" *ngIf="!showActivateButton && showStatus"> 
+                  <div class="col-lg-6">
+                    <select class="form-control form-control-lg mb-2 custom-select" (change)="onChange($event.target.value)">
+                      <option value="" selected>Select Funder Status</option>
+                      <option value="deActive">DeActivate Funder</option>
+                      <option value="suspend">Suspend Funder</option>
+                  </select>
+                  </div>
+                  <div class="col-lg-4"></div>
+                  <div class="col-lg-2">
+                    <button class="btn  btn-primary " [disabled]="!savebutton" (click)="OpenPopup(content)">Save</button>
+                  </div>
+                </div>
+            </form>
+  
+            
+
+              <form class="col-lg-10 row antim-form p-5 mt-2 mb-5 m-auto" >
+                  <div class="col-lg-12" style="text-align: center;"><h3>Personal Details</h3></div>
+
+                    <div class="row" style="width: 100%;">
+                      <div class="col-lg-6">
+                          <label class="font-bold mt-2"> Name: </label>
+                          <input  class="form-control  " value="{{funderAllDetails?.firstName}} {{funderAllDetails?.lastName}}"   readonly>
+                      </div>
+                      <div class="col-lg-6">
+                        <label class="font-bold mt-2"> Iqama Number : </label>
+                        <input  class="form-control  " value="{{funderAllDetails?.nationalIdNumber}}"   readonly>
+                    </div>
+                    </div>
+                    <div class="row" style="width: 100%;">
+
+                      <div class="col-lg-6">
+                        <label class="font-bold mt-2"> UserName: </label>
+                        <input  class="form-control  " value="{{funderAllDetails?.userName}}"   readonly>
+                    </div>
+                        <div class="col-lg-6">
+                            <label class="font-bold mt-2">Email : </label>
+                            <input  class="form-control  " value="{{funderAllDetails?.email}}"   readonly>
+                        </div>
+                      </div>
+                      <div class="row" style="width: 100%;">
+                        <div class="col-lg-6">
+                          <label class="font-bold mt-2">Phone Number : </label>
+                          <input  class="form-control  " value="{{funderAllDetails?.phoneNumber}}"  readonly>
+                      </div>
+                      <div class="col-lg-6">
+                          <label class="font-bold mt-2"> Antim Balance : </label>
+                          <input  class="form-control  " value="{{funderBalance}}" [(ngModel)]="funderBalance" [ngModelOptions]="{standalone: true}" readonly>
+                      </div>
+                            
+                      </div>
+                        <div class="col-lg-12" style="text-align: center; margin-top: 30px;"><h3>Address Details</h3>
+                        </div>
+                        <div class="row" style="width: 100%;">
+                            <div class="col-lg-8">
+                                <label class="font-bold mt-2"> Complete Address : </label>
+                                <input  class="form-control  " value="{{funderAddress}}"   readonly>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="font-bold mt-2"> City : </label>
+                                <input  class="form-control  " value="{{funderCity}}"   readonly>
+                            </div>
+                          </div>
+                          <div class="col-lg-12" style="text-align: center; margin-top: 30px;"><h3>Bank Details</h3>
+                          </div>
+                          <div class="row" style="width: 100%;">
+                              <div class="col-lg-6">
+                                  <label class="font-bold mt-2"> Bank Name : </label>
+                                  <input  class="form-control  " value="{{funderBankName}}"   readonly>
+                              </div>
+                              <div class="col-lg-6">
+                                  <label class="font-bold mt-2"> Account Number : </label>
+                                  <input  class="form-control  " value="{{funderBankAccountNumber}}"   readonly>
+                              </div>
+                            </div>
+
+                        <div class="row" style="width: 100%;">
+                          <div class="col-lg-6">
+                              <label class="font-bold mt-2"> IBAN Number : </label>
+                              <input  class="form-control  " value="{{funderBankIBANNumber}}"   readonly>
+                          </div>
+                          <div class="col-lg-6">
+                              <label class="font-bold mt-2"> Funding Limit : </label>
+                              <input  class="form-control  " value="{{funderFundingLimit}}"   readonly>
+                          </div>
+                        </div>
+
+             <ngx-spinner bdColor = "rgba(51, 51, 51, 0.8)"size = "medium"
+                color = "white" type = "ball-clip-rotate" [fullScreen] = "true">
+                <p style="color: white; margin-top:50px;font-size: 26px;" > Loading... </p>
+            </ngx-spinner>
+          </form>
+
+          <div class="col-lg-12" style="text-align: center; margin-top: 30px;"><h3>Account Statements</h3>
+          </div>  
+          <div class="col-lg-12" *ngIf="!ShowAccountStatements">
+              <p style="color: red; text-align: center; margin-top: 30px; font-size: 16px;">No Account Statement Uploaded By Funder!</p>
+            </div>
+        <div *ngIf="ShowAccountStatements">
+          <div class="row" style="width: 100%;" *ngFor="let file of accountStatements; let i = index;">
+            <div class="col-lg-2 " >
+            </div><div class="col-lg-6" >
+               <img src="assets/img/doc.png" width="60px" height="60px">
+               <p class="mt-2">{{file.name}}</p>
+            </div>
+              <div class="col-lg-1 " >
+              </div>
+              <div class="form-group mt-4 col-lg-3">
+                <button type="button" class="btn btn-primary "(click)="downloadFile(file.name)" >Download</button>
+              </div>
+           </div>
+          </div>
+
+
+          <ng-template #content1 let-modal>
+            <div class="modal-header">
+                <h4 class="modal-title p-1 m-1">    Do you really Want To Activate this User?
+                </h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>             
+              <div class="modal-footer">
+              <div class="col-lg-4"></div>
+              <div class="col-lg-4"><button class="btn btn-success btn-lg" (click)="activateUser()">Yes</button></div>
+              <div class="col-lg-4"><button class="btn btn-danger btn-lg" (click)="modal.close('Close click')">No</button></div>
+              </div>
+          </ng-template>
+
+
+          <ng-template #content let-modal>
+            <div class="modal-header">
+                <h4 class="modal-title p-1 m-1"> Do you really Want To {{funderStatus}} this Funder?</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <textarea rows="7" cols="100" placeholder="Enter Reason here..." [(ngModel)]="reason"></textarea>
+                         
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <div class="col-lg-4"></div>
+                      <div class="col-lg-4"><button class="btn btn-success btn-lg" (click)="ChangeStatus()">Yes</button></div>
+                      <div class="col-lg-4"><button class="btn btn-danger btn-lg" (click)="modal.close('Close click')">No</button></div>
+              </div>
+          </ng-template>
+          <ngx-spinner bdColor = "rgba(51, 51, 51, 0.8)"size = "medium"
+          color = "white" type = "ball-clip-rotate" [fullScreen] = "true">
+          <p style="color: white; margin-top:50px;font-size: 26px;" > Loading... </p>
+          </ngx-spinner>
+
+        
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  

@@ -1,0 +1,39 @@
+.btn-responsive {
+  padding: 10px;
+  width: 75px;
+  margin-right: 5px;
+  margin-left: 5px;
+
+}
+
+@media (max-width: 992px){
+  .btn-responsive {
+    width: 100px;
+  }
+}
+
+input.date-picker{
+  padding: 10px 15px;
+  font-size: 13px;
+  height: 48px;
+}
+
+.font-purple{
+  color: #5c20d2;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+}
+
+.mat-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: -4px 30px 33px 0px #f1f1f1;
+  padding: 35px 44px;
+}
+
+.icon-style {
+  border-right: 1px solid #DDDDDD;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  background-color: white;
+}

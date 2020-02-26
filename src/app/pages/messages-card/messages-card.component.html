@@ -1,0 +1,41 @@
+<div class="card py-0 px-3" style="width: 100%;" *ngFor="let messages of adminMessages">
+  <div *ngIf="!NoDataFound">
+    <div class="card-header ml-3">
+ <span style="color: green"> <b> <u>Message Type</u> : </b> {{ messages.messagetype }} </span>
+  </div>
+  <div class="card-body row">
+        <div class="card-body py-2">
+          <h3 class="card-title mt-0 ml-3" style="text-align: left; color: #5c20d2 !important;">
+           <b> <u>Name</u> : </b> {{ messages.name }}
+          </h3>
+          <h6 class="card-subtitle ml-3 mb-2 " style="color: black !important;">
+          <b> <u>Email</u> : </b>  {{ messages.email }}
+          </h6>
+          <p class="card-text ml-3">
+          <b> <u>Message</u> : </b>
+          <span *ngIf="messages.fullMessage" >{{ messages.message }} </span>
+          <span *ngIf="messages.trimMessage" >{{ messages.trimMsg }} ... <a (click)="showFullmsg(messages.id)" style="color:#460ac0; cursor: pointer;">Read More</a></span>
+          </p>
+
+        </div>
+      </div>              
+  <div class="card-footer row ml-2 d-flex justify-content-between w-100 text-muted">
+  <div>
+    <b> <u>Date</u> : </b> {{ messages.date }}
+  </div> 
+    <div *ngIf="messages.contactMessageStatus == 2">
+        <button class="btn btn-success" (click)="markAsRead(messages.id)">Mark as Read</button>
+    </div>
+  </div>
+</div>
+  
+</div>
+<div class="card-body py-2" *ngIf="NoDataFound">
+    <h2 class="card-title my-3" style="text-align: center; color: red !important;">
+      No Messages Found!
+    </h2>
+  </div>
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="medium" color="white" type="ball-clip-rotate"
+  [fullScreen]="true">
+  <p style="color: white; margin-top:50px;font-size: 26px;">Loading...</p>
+</ngx-spinner>

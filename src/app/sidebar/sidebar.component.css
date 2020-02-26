@@ -1,0 +1,14 @@
+.style-count {
+  border-radius: 50%;
+  width: 31px;
+  height: 28px;
+  background-color: rgb(212, 177, 164);
+}
+.style-count-no-msg {
+  width: 31px;
+  height: 28px;
+}
+
+.padding{
+  padding: 0 10px;
+}
